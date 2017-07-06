@@ -1,3 +1,11 @@
-<h1>
-  {{title}}
-</h1>
+<div>
+  <button id="btn1" (click)="displayImage($event)">Show first image</button>
+  <button id="btn2" (click)="displayImage($event)">Show second image</button>
+  <button (click)="displayImage($event)">Show both images</button><br><br>
+</div>
+<div>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/768px-Angular_full_color_logo.svg.png"
+       [ngClass]="{'isVisible': showImage[0]}">
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYESQ9f-0sYXGuAI8_4Jeb0VZp7oYOssDw3j3ty11n2mnunWd6"
+       [ngClass]="{'isVisible': showImage[1]}">
+</div>
