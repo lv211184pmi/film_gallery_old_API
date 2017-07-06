@@ -6,21 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  showImage: Array<boolean> = [true, true];
+  title: string = 'Каталог фільмів';
 
-  displayImage(event) {
-    let btnName: string = event.target.id;
-    if (btnName == 'btn1') {
-      return (this.showImage[0] = false) && (this.showImage[1] = true);
-    } else if (btnName == 'btn2') {
-      return (this.showImage[0] = true) && (this.showImage[1] = false);
-    } else {
-      return (this.showImage[0] = false) && (this.showImage[1] = false);
-    }  
-  }
+  links = [
+    { path: '/dashboard', icon: 'home', label: 'Головна'},
+    { path: '/filmList', icon: 'list', label: 'Всі фільми'},
+    { path: '/profile', icon: 'assignment_ind', label: 'Профіль'}
+  ];
+
 }
-
-
-
-
-

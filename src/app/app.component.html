@@ -1,11 +1,29 @@
-<div>
-  <button id="btn1" (click)="displayImage($event)">Show first image</button>
-  <button id="btn2" (click)="displayImage($event)">Show second image</button>
-  <button (click)="displayImage($event)">Show both images</button><br><br>
-</div>
-<div>
-  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/768px-Angular_full_color_logo.svg.png"
-       [ngClass]="{'isVisible': showImage[0]}">
-  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYESQ9f-0sYXGuAI8_4Jeb0VZp7oYOssDw3j3ty11n2mnunWd6"
-       [ngClass]="{'isVisible': showImage[1]}">
-</div>
+<md-toolbar>
+  <button (click)="sidenav.toggle()" class="toolbar-button" md-mini-fab><md-icon>menu</md-icon></button>
+  <div class="toolbar-button-row">
+    <a md-button
+      *ngFor="let topLink of links" href="#">
+      <md-icon>{{topLink.icon}}</md-icon> &nbsp; {{topLink.label}}
+    </a>
+  </div>
+  <span>{{title}}</span>
+</md-toolbar>
+
+<md-sidenav-container>
+  <md-sidenav #sidenav mode="over" class="app-sidenav">
+    <nav>
+      <a md-button
+        class="nav-link"
+        *ngFor="let link of links"
+        href="#">
+        <md-icon>{{link.icon}}</md-icon> &nbsp; {{link.label}}
+      </a>
+    </nav>
+  </md-sidenav>
+
+  <div class="app-content">
+    <film-list></film-list>
+  </div>
+</md-sidenav-container>
+
+

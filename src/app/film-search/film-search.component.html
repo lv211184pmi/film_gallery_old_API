@@ -1,0 +1,13 @@
+<form class="example-form">
+	<md-input-container class="example-full-width">
+		<input mdInput placeholder="Введіть назву фільму"
+	     			name="filmName" 
+					[(ngModel)]="filmName" 
+					(keyup.enter)="getFilms(filmName)">
+	</md-input-container>
+	<md-select placeholder="Виберіть вигляд">
+		<md-option *ngFor="let film of filmViews" [value]="film.value" (click)="getView(film.value)">
+			{{ film.viewValue }}
+		</md-option>
+	</md-select>
+</form>

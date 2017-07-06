@@ -1,0 +1,15 @@
+md-grid-list {
+    width:850px;
+    margin: 0px;
+    padding: 5px;
+}
+
+film-card {
+    width: 400px;
+}
+
+.button-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}

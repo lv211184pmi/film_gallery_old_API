@@ -1,0 +1,16 @@
+<md-card [ngClass]="filmView">
+    <img src="{{filmItem.Poster}}">
+    <div class="film-card-table-content">
+        <md-card-header>
+            <md-card-title>{{filmItem.Title}}</md-card-title>
+        </md-card-header>
+        <md-card-content>
+            <p>{{filmItem.Genre}}</p>
+            <p>{{filmItem.Plot}}</p>
+        </md-card-content>
+        <md-card-actions>
+            <button md-button>Подробнее</button>
+        </md-card-actions>
+    </div>
+</md-card>
+

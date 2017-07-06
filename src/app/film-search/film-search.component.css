@@ -1,0 +1,13 @@
+
+md-input-container{
+    width: 830px;
+    padding: 0px;
+}
+.example-form {
+    padding-left: 15px;
+  width: 830px;
+}
+
+.example-full-width {
+  width: 100%;
+}
