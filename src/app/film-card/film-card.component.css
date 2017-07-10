@@ -1,0 +1,31 @@
+
+.film-card-table {
+  width: 400px;
+  height: 800px;
+  margin-bottom: 20px; 
+  padding: 0px;
+}
+
+.film-card-table > img {
+  width: 400px;
+  height: 500px;
+
+}
+
+
+.film-card-list {
+  width: 800px;
+  height: 500px;
+  margin-bottom: 20px; 
+  padding: 0px;
+}
+
+.film-card-list > img {
+  width: 150px;
+  height: 300px;
+
+}
+
+.film-card-list > .film-card-table-content {
+  float: right;
+}

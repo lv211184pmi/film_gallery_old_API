@@ -1,0 +1,13 @@
+<film-search 
+	(getFilmName)="getFilmName($event)"
+	(getFilmView)="getFilmView($event)">
+</film-search>
+<md-card *ngIf="getNoFilms()">There are no films</md-card>
+<md-grid-list cols="2" rowHeight="800px">
+	<md-grid-tile *ngFor="let film of filmList">
+		<film-card [filmId]="film.imdbID" [filmView]="viewFilm"></film-card>
+	</md-grid-tile>
+</md-grid-list><br>
+<div class="button-row">
+	<button md-button (click)="addFilms()">Завантажити більше фільмів...</button>
+</div>
